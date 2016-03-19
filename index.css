@@ -4,20 +4,21 @@ html {
     height: 100%;
     
 }
-
+h1{
+  font-family: 'Cinzel', cursive;
+}
 body,
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Rationale',Cursive;
     font-weight: 800;
 }
 
 .topnav {
-    font-size: 15px;
+    font-size: 18px;
     border-bottom: 1px outset rgba(192, 192, 192, 0.5);
     background: black;
     box-shadow: 0px 1px rgba(0, 0, 0, 0.3);
@@ -45,22 +46,46 @@ color: #000;
 }
 
 .lead {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 /*top background*/
 .intro-header {
-    height: 855px;  
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    height: 600px;  
+    padding: 10;
     text-align: center;
-    background: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/7NWB2A8I0R.jpg') no-repeat center center fixed;
+    /*background: url('') no-repeat center center fixed;*/
+  animation:pulse 30s infinite;
     background-size: cover;
-    height: 855px;
+    height: 700px;
 }
+/*animate color*/
+
+
+@keyframes pulse {
+  0% {
+    background-color: #114B5F ;
+  }
+  20%{
+    background-color: #028090;
+  }
+  40%{
+    background-color:#E4FDE1;
+  }
+   60%{
+    background-color:#456990;
+  }
+   80%{
+    background-color:#F08080;
+  }
+  100% {
+    background-color:#F45B69;
+  }
+}
+/*overlay*/
 .bg-overlay {
   background:rgba(0,0,0, 0.3);
-  height: 855px;
+  height: 500px;
 }
 #headshot {
   width: 220px;
@@ -73,14 +98,14 @@ color: #000;
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 /*Big header*/
 .intro-message > h1 {
     margin-top: -50px;
     text-shadow: 2px 1px 2px #000;
-    font-size: 5em;
+    font-size: 7em;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -101,7 +126,7 @@ color: #000;
     }
 
     .intro-message > h1 {
-        font-size: 3em;
+        font-size: 4em;
     }
 
     ul.intro-social-buttons > li {
@@ -159,17 +184,17 @@ hr.intro-divider {
 
 /*section 2*/
 .content-section-a {
-    padding: 50px 0;
-    background: url('http://40.media.tumblr.com/a1d2d209bb135f351665b75301c57185/tumblr_nzgoh28slT1sfie3io1_1280.jpg') no-repeat center center fixed;
+    padding: 0;
+    background: url('http://images.freeimages.com/images/previews/331/lined-paper-1536899.jpg') no-repeat center ;;
     background-size: cover;
-    height: 855px;
+    height: 700px;
 }
 .bg-overlay2 {
   margin-top: -50px;
   background: rgba(255, 255, 255, 0.2);
   height: 855px;
 }
-  /*self-taught*/
+ 
 .container .link {
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -210,7 +235,7 @@ h2.section-heading {
 /* Portfolio section*/
 section {
   color: black;
-  background: url('http://40.media.tumblr.com/a1d2d209bb135f351665b75301c57185/tumblr_nzgoh28slT1sfie3io1_1280.jpg') no-repeat center center fixed;
+  
   background-size: cover;
 }
 
@@ -313,12 +338,28 @@ section {
     width: 200px;
     border-top: 3px solid #e7e7e7;
 }
+/*bottom*/
 
-.banner {
-    padding: 100px 0;
-    background: url('http://36.media.tumblr.com/059d14efc423af9e8ac42a1e149048ab/tumblr_nyi6dhqNwJ1sfie3io1_1280.jpg') no-repeat center center fixed;
+.gradient {
+   padding: 100px 0;
+  background: #F45B69; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, #F45B69,#114B5F); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #114B5F, #F45B69); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #114B5F, #F45B69); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #F45B69, #114B5F); /* Standard syntax */
+
     background-size: cover;
     height: 755px;
+ 
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
 }
 
 .bg-overlay4 {
